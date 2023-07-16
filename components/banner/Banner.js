@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { client } from "@/lib/contentful/client";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebookF, FaTwitter, FaLinkedin, FaGoogle } from "react-icons/fa";
@@ -53,18 +52,6 @@ const Banner = ({ data }) => {
     );
   }, []);
 
-  // const renderOptions = {
-  //   renderNode: {
-  //     "embedded-asset-block": (node) => {
-  //       const { title, file } = node.data.target.fields;
-  //       const imageUrl = file.url;
-  //       const imageAlt = title || "";
-
-  //       return <Image src={imageUrl} alt={imageAlt} height={400} width={400} />;
-  //     },
-  //   },
-  // };
-
   return (
     <section
       id="home"
@@ -85,11 +72,11 @@ const Banner = ({ data }) => {
               cursorColor="#ff014f"
             />
           </h2>
-          <p className="text-base font-bodyfont leading-6 tracking-wide">
+          <div className="text-base font-bodyfont leading-6 tracking-wide">
             {data?.items[0].fields?.aboutYourSelf
               ? documentToReactComponents(data?.items[0]?.fields?.aboutYourSelf)
               : `I am a highly motivated and detail-oriented Web Developer with 11 months of experience in developing web applications using the MERN stack. I have a passion for developing high-quality and responsive web applications using React, Node, and other cutting-edge web technologies.`}
-          </p>
+          </div>
         </div>
 
         <div className="flex gap-10 flex-col  lgl:flex-row lg:flex-row mdl:flex-row xl:flex-row xl:gap-0 lgl:gap-0 justify-between ">

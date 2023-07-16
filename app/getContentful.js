@@ -39,15 +39,6 @@ async function fetchContentfulData() {
 
 export default async function GetContentful() {
   const responseData = await fetchContentfulData();
-  // const {
-  //   banner,
-  //   experience,
-  //   skills,
-  //   education,
-  //   features,
-  //   profiles,
-  //   projects,
-  // } = await fetchContentfulData();
 
   return <Portfolio data={responseData} />;
 }

@@ -15,9 +15,11 @@ const Card = ({ item }) => {
             <h2 className="text-xl  font-titleFont font-bold text-gray-300">
               {item?.fields?.title}
             </h2>
-            <p className="base">
-              {documentToReactComponents(item?.fields?.about)}
-            </p>
+
+            {item?.fields?.about
+              ? documentToReactComponents(item?.fields?.about)
+              : null}
+
             <span className="text-2xl text-designColor">
               <HiArrowRight />
             </span>
