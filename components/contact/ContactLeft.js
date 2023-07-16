@@ -51,12 +51,12 @@ const ContactLeft = ({ profile }) => {
           </span>
           <span className="bannerIcon">
             <a href={`${profile.items[0].fields?.contact[1]?.fields?.link}`}>
-              <FaLinkedin />
+              <BsGithub />
             </a>
           </span>
           <span className="bannerIcon">
             <a href={`${profile.items[0].fields?.contact[2]?.fields?.link}`}>
-              <BsGithub />
+              <FaLinkedin />
             </a>
           </span>
         </div>

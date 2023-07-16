@@ -94,12 +94,12 @@ const Banner = ({ data }) => {
               </span>
               <span className="bannerIcon">
                 <a href={`${data.items[0].fields?.contacts[1]?.fields?.link}`}>
-                  <FaLinkedin />
+                  <BsGithub />
                 </a>
               </span>
               <span className="bannerIcon">
                 <a href={`${data.items[0].fields?.contacts[2]?.fields?.link}`}>
-                  <BsGithub />
+                  <FaLinkedin />
                 </a>
               </span>
             </div>
